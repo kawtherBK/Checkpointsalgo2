@@ -1,0 +1,32 @@
+ALGORITHM sum_distinct
+VAR
+   var setone,settwo,setthree : ARRAY_OF INTEGER[];
+   var sum:=0;
+   var count:=1;
+   var n :integer;
+
+ Begin
+ setone:={12,13,6,10};
+ ettwo:={13,4=10,16,9,15};
+ setone:=setone.concat(settwo);
+ n:=setone.length;
+ setone.sort();
+ For i FROM 0 TO n-1 DO
+ let val:=setone[i];
+  FOR j FROM i+1 TO n DO
+  IF(setone[i]=val)THEN
+    count:=count++; 
+  END_IF
+ END_FOR
+ IF(count=1) THEN
+  setthree.push(val);
+  ELSE
+  count:=1;
+  END_IF
+ END_For
+ For k FROM 0 TO setthree.length-1 DO
+ sum += setthree[k];
+ END_FOR
+ write ("THE SUM OF DISTINCT ELEMENTS IS "+sum);
+
+ end
