@@ -1,3 +1,4 @@
+//sum of sum_distinct element :hashtable
 ALGORITHM sum_distinct
 VAR
    var setone,settwo,setthree : ARRAY_OF INTEGER[];

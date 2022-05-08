@@ -1,0 +1,22 @@
+//sum of overlopping element :ARRAY
+
+ALGORITHM OverloppSum
+VAR
+ setone,settwo: ARRAY_OF Integer[10];
+ sum:Integer;
+
+ Begin
+ setone:={5,1,3,4};
+ settwo:={3,8,5,4};
+ sum:=0;
+
+FOR i FROM 0 TO setone.length-1 DO
+ FOR j FROM 0 TO settwo.length-1 DO
+  IF (setone[i]===settwo[j]) THEN
+   sum += setone[i]*2;
+  END_IF
+ END_FOR
+END_FOR
+ write("SUM OF OVELOPPING ELEMENTS IS: "+sum);
+
+END
